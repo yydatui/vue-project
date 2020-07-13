@@ -11,7 +11,7 @@ module.exports = {
       .set('@assets', resolve('src/assets'))
       .set('@views', resolve('src/views'))
       .set('@request', resolve('src/request'))
-      .set('@common', resolve('src/components/common'))
+      .set('@common', resolve('src/common'))
       .set('@content', resolve('src/components/content'))
       .set('@utils', resolve('src/utils'))
   },
