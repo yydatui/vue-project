@@ -6,7 +6,7 @@ sdfsgdsgds
 
 <script>
 export default {
-  name: '',
+  name: 'navbar',
   data() {
     return {
 
