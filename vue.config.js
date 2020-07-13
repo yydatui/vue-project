@@ -14,5 +14,6 @@ module.exports = {
       .set('@common', resolve('src/common'))
       .set('@content', resolve('src/components/content'))
       .set('@utils', resolve('src/utils'))
+      .set('@img', resolve('src/assets/images'))
   },
 }

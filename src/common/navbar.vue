@@ -1,6 +1,8 @@
 <template>
   <div class="nav">
-    <div class="logo"></div>
+    <div class="logo">
+      <img src="@img/ia_100000000.png" alt="" srcset="">
+    </div>
     <div class="top-input">
       <el-input placeholder="请输入内容" v-model="input" clearable></el-input>
     </div>
