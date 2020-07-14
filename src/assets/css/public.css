@@ -1,0 +1,60 @@
+.content .shop .el-button--primary {
+  width: 132px;
+  height: 40px;
+  padding: 0;
+  border: 0ch;
+  color: #fff !important;
+}
+
+.content .item-msg .el-button--primary {
+  width: 100px;
+  height: 24px;
+}
+
+.content .item-msg .el-button {
+  padding: 0;
+  border-radius: 0;
+  border: 0;
+}
+
+.content .item-msg .el-button--primary span {
+  line-height: 24px;
+}
+
+.navbar .el-submenu .el-menu-item {
+  min-width: 0;
+}
+
+.navbar .el-icon-arrow-down:before {
+  color: #fff;
+}
+
+.navbar .el-menu-item-group .el-menu-item {
+  background: #fff !important;
+  color: #808080 !important;
+}
+
+.navbar .el-menu-item-group__title {
+  padding: 0 !important;
+}
+
+.navbar .el-menu-item:hover,
+.navbar .el-submenu__title:hover {
+  background: #0AA1ED !important;
+}
+
+.navbar .el-menu-item-group .el-menu-item:hover {
+  background: #fff !important;
+  color: #0AA1ED !important;
+}
+
+.navbar .el-submenu__title {
+  line-height: 36px !important;
+  height: 46px !important;
+  border-bottom: 10px solid #F5F5F5;
+}
+
+.navbar .el-menu-item-group {
+  transition: all 0s;
+  margin-top: -10px;
+}
