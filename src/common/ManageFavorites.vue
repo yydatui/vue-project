@@ -7,35 +7,72 @@
 			<div class="all" @click="all()">
 				<span><img :src="allImgSrc" />&nbsp;全选</span>
 			</div>
-			<div class="delete">删除</div>
-			<div class="add">加入购物车</div>
+			<el-button type="text" @click="open()" class="delete">删除</el-button>
+			<el-button type="text" @click="add()" class="add">加入购物车</el-button>
 		</div>
 	</div>
 </template>
 
 <script>
 	export default {
-		data(){
-			return{
-				showFlag:false,
-				allImgSrc:'http://doc.canglaoshi.org/tstore_v1/images/myCollect/product_normal.png',
+		data() {
+			return {
+				showFlag: false,
+				allImgSrc: 'http://doc.canglaoshi.org/tstore_v1/images/myCollect/product_normal.png',
 				state: true
 			}
 		},
 		methods: {
-			handel(){
+			handel() {
 				this.showFlag = !this.showFlag
-				this.$bus.$emit('modality',this.showFlag)
+				this.$bus.$emit('modality', this.showFlag)
 			},
-			all(){
+			all() {
 				this.state = !this.state
-				this.allImgSrc = this.state?'http://doc.canglaoshi.org/tstore_v1/images/myCollect/product_normal.png':'http://doc.canglaoshi.org/tstore_v1/images/myCollect/product_true.png';
+				this.allImgSrc = this.state ? 'http://doc.canglaoshi.org/tstore_v1/images/myCollect/product_normal.png' :
+					'http://doc.canglaoshi.org/tstore_v1/images/myCollect/product_true.png';
 
-				this.$bus.$emit('allSelect',this.state)
+				this.$bus.$emit('allSelect', this.state)
+			},
+			open() {
+				this.$confirm('确定删除您的这个宝贝吗？', '提示', {
+					confirmButtonText: '确定',
+					cancelButtonText: '取消',
+					type: 'warning'
+				}).then(() => {
+					this.$message({
+						type: 'success',
+						message: '删除成功!',
+					});
+					this.$bus.$emit('delete');
+				}).catch(() => {
+					this.$message({
+						type: 'info',
+						message: '已取消删除'
+					});
+				});
+			},
+			add() {
+				this.$confirm('将您的宝贝移入购物车？', '提示', {
+					confirmButtonText: '确定',
+					cancelButtonText: '取消',
+					type: 'warning'
+				}).then(() => {
+					this.$message({
+						type: 'success',
+						message: '加入成功!',
+					});
+					this.$bus.$emit('delete');
+				}).catch(() => {
+					this.$message({
+						type: 'info',
+						message: '已取消加入'
+					});
+				});
 			}
 		},
-		mounted(){
-			this.$bus.$on('modality',(value)=>{
+		mounted() {
+			this.$bus.$on('modality', (value) => {
 				this.showFlag = value
 			})
 		}
@@ -62,7 +99,8 @@
 			top: 12px;
 			text-align: center;
 
-			cursor:pointer;
+			cursor: pointer;
+
 			span {
 				line-height: 24px;
 				color: #fff;
@@ -80,15 +118,22 @@
 			display: flex;
 			justify-content: space-between;
 			width: 200px;
-			.all{
+
+			.all {
 				cursor: pointer;
 			}
 
-			.delete{
+			.delete {
+				font: 12px simhei;
+				padding: 0;
+				color: #808080;
 				cursor: pointer;
 			}
 
-			.add{
+			.add {
+				font: 12px simhei;
+				padding: 0;
+				color: #808080;
 				cursor: pointer;
 			}
 		}

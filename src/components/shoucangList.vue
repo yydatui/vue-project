@@ -6,9 +6,9 @@
 				<div class="detail">{{item.details}}</div>
 				<div class="price">
 					<span>{{item.price}}</span>
-					<span></span>
+					<span>加入购物车</span>
 				</div>
-				<div class="modality" v-show="modality">
+				<div class="modality" v-show="modality" @click="select(index)">
 					<div class="select">
 						<img class="selectImg" :src="selectImg" />
 					</div>
@@ -25,32 +25,32 @@
 				goods: [{
 					imgSrc: 'http://doc.canglaoshi.org/tstore_v1/images/myCollect/product_img1.png',
 					details: 'DELL燃7000 14.0英寸微边框(i5-7200u 8GB 256GB SSD HD620 Win10)银',
-					price: 4000,
+					price: '¥4000',
 					state: false
 				}, {
 					imgSrc: 'http://doc.canglaoshi.org/tstore_v1/images/myCollect/product_img2.png',
 					details: 'DELL燃7000 14.0英寸微边框(i5-7200u 8GB 256GB SSD HD620 Win10)银',
-					price: 4000,
+					price: '¥4000',
 					state: false
 				}, {
 					imgSrc: 'http://doc.canglaoshi.org/tstore_v1/images/myCollect/product_img3.png',
 					details: 'DELL燃7000 14.0英寸微边框(i5-7200u 8GB 256GB SSD HD620 Win10)银',
-					price: 4000,
+					price: '¥4000',
 					state: false
 				}, {
 					imgSrc: 'http://doc.canglaoshi.org/tstore_v1/images/myCollect/product_img4.png',
 					details: 'DELL燃7000 14.0英寸微边框(i5-7200u 8GB 256GB SSD HD620 Win10)银',
-					price: 4000,
+					price: '¥4000',
 					state: false
 				}, {
 					imgSrc: 'http://doc.canglaoshi.org/tstore_v1/images/myCollect/product_img5.png',
 					details: 'DELL燃7000 14.0英寸微边框(i5-7200u 8GB 256GB SSD HD620 Win10)银',
-					price: 4000,
+					price: '¥4000',
 					state: false
 				}, {
 					imgSrc: 'http://doc.canglaoshi.org/tstore_v1/images/myCollect/product_img6.png',
 					details: 'DELL燃7000 14.0英寸微边框(i5-7200u 8GB 256GB SSD HD620 Win10)银',
-					price: 4000,
+					price: '¥4000',
 					state: false
 				}, ],
 				modality: false,
@@ -58,6 +58,11 @@
 			}
 		},
 		methods: {
+			select(index){
+				let selectImg = document.getElementsByClassName('selectImg')
+				selectImg[index].src = !this.goods[index].state?'http://doc.canglaoshi.org/tstore_v1/images/myCollect/product_true_big.png':'http://doc.canglaoshi.org/tstore_v1/images/myCollect/product_normal_big.png'
+				this.goods[index].state = !this.goods[index].state
+			}
 		},
 		mounted(){
 			this.$bus.$on('modality',(value)=>{
@@ -70,6 +75,17 @@
 					item.state = true
 				})
 				this.selectImg = value?'http://doc.canglaoshi.org/tstore_v1/images/myCollect/product_normal_big.png':'http://doc.canglaoshi.org/tstore_v1/images/myCollect/product_true_big.png'
+			})
+			
+			this.$bus.$on('delete',()=>{
+				this.goods = this.goods.filter((item)=>{
+					return !item.state
+				})
+				let selectImg = document.getElementsByClassName('selectImg')
+				selectImg.forEach((item)=>{
+					console.log(item)
+					item.src = 'http://doc.canglaoshi.org/tstore_v1/images/myCollect/product_normal_big.png'
+				})
 			})
 		}
 	}
@@ -104,11 +120,15 @@
 
 				.detail {
 					margin: 10px 0 10px 10px;
+					width: 90%;
 				}
 
 				.price {
 					margin: 0 0 10px 10px;
 					color: #0aa1ed;
+					width: 90%;
+					display: flex;
+					justify-content: space-between;
 				}
 
 				.modality {
