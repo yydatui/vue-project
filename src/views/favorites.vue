@@ -28,7 +28,7 @@
 <style>
 	#shouCang {
 		width: 1000px;
-		margin: 80px auto;
+		margin: 20px auto;
 	}
 
 	.title {

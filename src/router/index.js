@@ -9,6 +9,7 @@ Vue.use(VueRouter)
 import Index from '@views/index'
 import Login from '@views/login'
 import Orders from '@views/orders'
+import Detail from '../views/detail.vue'
 
 const routes = [{
     path: '/',
@@ -42,7 +43,11 @@ const routes = [{
     path: '/orders',
     name: 'Orders',
     component: Orders
-  }
+  },{
+		path: '/detail',
+		name: 'Detail',
+		component:Detail
+	}
 ]
 
 // const router = new VueRouter({
