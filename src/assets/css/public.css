@@ -77,6 +77,10 @@
   background: #0D9AE1;
 }
 
+.navbar-sub.is-active .el-submenu__title{
+  border-bottom: 10px solid #F5F5F5 !important;
+}
+
 
 /*lx*/
 

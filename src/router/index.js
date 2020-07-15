@@ -4,8 +4,10 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 //路由懒加载
-const About = () => import("@views/About")
-const Home = () => import("@views/Home")
+const About = () =>
+  import ("@views/About")
+const Home = () =>
+  import ("@views/Home")
 
 const Index = () => import("@views/index")
 const Login = () => import("@views/login")
@@ -24,45 +26,47 @@ const Detail = () => import("@views/detail")
 // import Favorites from '@views/favorites'
 // import Detail from '../views/detail.vue'
 
+import Detail from '../views/detail.vue'
+
 const routes = [{
     path: '/',
     name: 'Index',
     component: Index,
-    meta:{
-       title: "首页 - 学子商城守护您的优质商品"
-     }
+    meta: {
+      title: "首页 - 学子商城守护您的优质商品"
+    }
   },
   {
     path: '/index',
     name: 'Index',
     component: Index,
-    meta:{
-       title: "首页 - 学子商城守护您的优质商品"
-     }
+    meta: {
+      title: "首页 - 学子商城守护您的优质商品"
+    }
   },
   {
     path: '/login',
     name: 'Login',
     component: Login,
-    meta:{
-       title: "登陆 - 学子商城守护您的优质商品"
-     }
+    meta: {
+      title: "登陆 - 学子商城守护您的优质商品"
+    }
   },
   {
     path: '/home',
     name: 'Home',
     component: Home,
-    meta:{
-       title: "首页 - 学子商城守护您的优质商品"
-     }
+    meta: {
+      title: "首页 - 学子商城守护您的优质商品"
+    }
   },
   {
     path: '/about',
     name: 'About',
     component: About,
-    meta:{
-       title: "关于 - 学子商城守护您的优质商品"
-     }
+    meta: {
+      title: "关于 - 学子商城守护您的优质商品"
+    }
   }, {
     path: '/favorites',
     name: 'Favorites',
@@ -81,9 +85,9 @@ const routes = [{
 		path: '/orders',
 		name: 'Orders',
     component: Orders,
-    meta:{
-       title: "我的订单 - 学子商城守护您的优质商品"
-     }
+    meta: {
+      title: "我的订单 - 学子商城守护您的优质商品"
+    }
   }, {
     path: '/register',
     name: 'Register',
@@ -91,8 +95,14 @@ const routes = [{
     meta:{
        title: "注册 - 学子商城守护您的优质商品"
      }
-  }
-
+  },{
+		path: '/detail',
+		name: 'Detail',
+    component:Detail,
+    meta: {
+      title: "商品详情 - 学子商城守护您的优质商品"
+    }
+	}
 ]
 
 const router = new VueRouter({

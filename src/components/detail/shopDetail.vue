@@ -85,10 +85,17 @@
 				this.defaultImgSrc = this.goodsImg[index].bigImgSrc;
 			},
 			imgChange(event) {
+<<<<<<< HEAD
 
 			},
 			handleChange(value) {
 
+=======
+				event.className = 'changeBig'
+			},
+			handleChange(value) {
+				
+>>>>>>> 345ac858f7d5ba20701450a79bc0e377ba93429a
 			}
 		},
 		created() {}
@@ -104,6 +111,7 @@
 			.bigImg {
 				overflow: hidden;
 
+<<<<<<< HEAD
 				img {
 					transition: 1s transform;
 					&:hover {
@@ -119,6 +127,15 @@
 				// 	animation-delay: 5s;
 				// 	transform: scale(1.08);
 				// }
+=======
+				.changeBig {
+					width: 100%;
+					height: 100%;
+					animation: changeBiger 5s infinite;
+					animation-delay: 5s;
+					transform: scale(1.08);
+				}
+>>>>>>> 345ac858f7d5ba20701450a79bc0e377ba93429a
 			}
 
 			.smallImgs {
@@ -183,8 +200,13 @@
 					}
 				}
 			}
+<<<<<<< HEAD
 
 			.buttons {
+=======
+			
+			.buttons{
+>>>>>>> 345ac858f7d5ba20701450a79bc0e377ba93429a
 				margin-left: 50px;
 				margin-top: 30px;
 				width: 50%;
@@ -193,6 +215,7 @@
 			}
 		}
 	}
+<<<<<<< HEAD
 
 	@keyframes scaleDraw {
 
@@ -206,4 +229,6 @@
 			transform: scale(1.2);
 		}
 	}
+=======
+>>>>>>> 345ac858f7d5ba20701450a79bc0e377ba93429a
 </style>
