@@ -4,6 +4,7 @@
     <login-bar v-else />
     <index-nav v-if="isShowBar" />
 		<router-view></router-view>
+    <footer-box v-if="!isShowBar" />
     <footer-nav />
   </div>
 </template>
@@ -13,22 +14,26 @@ import loginBar from '@common/loginBar'
 import navBar from '@common/navbar'
 import indexNav from '@common/indexNav'
 import footerNav from '@common/footerNav'
+import footerBox from '@/common/footerBox'
 export default {
   components:{
     loginBar,
     navBar,
     indexNav,
-    footerNav
+    footerNav,
+    footerBox
   },
   data(){
     return {
       isShowBar: true
     }
   },
-  created(){
-    let path = this.$route.path
-    this.isShowBar = (path == "/login" || path == "/register") ? false : true
-  }
+  watch:{   //监听路由变化
+    $route( to , from ){
+      let path = to.path
+      this.isShowBar = (path == "/login" || path == "/register") ? false : true
+     }
+}
 }
 </script>
 <style>

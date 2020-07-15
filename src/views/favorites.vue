@@ -10,7 +10,7 @@
 </template>
 
 <script>
-	import ManageFavorites from '../common/ManageFavorites.vue'
+	import ManageFavorites from '@/common/ManageFavorites.vue'
 	import shoucangList from '@components/shoucangList.vue'
 	export default {
 		data() {
@@ -28,7 +28,7 @@
 <style>
 	#shouCang {
 		width: 1000px;
-		margin: 80px auto;
+		margin: 20px auto;
 	}
 
 	.title {

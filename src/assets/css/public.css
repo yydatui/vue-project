@@ -63,3 +63,72 @@
   transition: all 0s;
   margin-top: -10px;
 }
+
+.operate .el-button {
+  width: 68px;
+  height: 32px;
+  padding: 0;
+  font: 12px simhei;
+  background: #11A5EF;
+  border-radius: 2px;
+}
+
+.operate .el-button:hover {
+  background: #0D9AE1;
+}
+
+
+/*lx*/
+
+.address .el-select {
+  width: 130px;
+}
+
+.name .el-input__inner {
+  width: 86px;
+}
+
+.detailedaddress .el-textarea__inner {
+  width: 443px;
+}
+
+.fiexdtel .el-input {
+  width: 156px;
+}
+
+.tel .el-input {
+  width: 156px;
+}
+
+.postcode .el-input {
+  width: 156px;
+}
+
+.addressname .el-input {
+  width: 81px;
+}
+
+.login .el-button {
+  width: 250px;
+}
+
+.login .el-button--primary {
+  padding: 12px 20px !important;
+}
+
+.login .el-form-item__content {
+  margin-top: 10px;
+}
+
+.elform .el-form-item__label {
+  color: #fff !important;
+}
+
+.register .el-button--primary {
+  width: 220px;
+  margin-left: 75px;
+}
+
+.pass .el-input__inner {
+  width: 164px;
+}
