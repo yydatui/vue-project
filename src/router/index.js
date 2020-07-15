@@ -29,7 +29,7 @@ const Favorites = () =>
 // import Register from '@views/register'
 // import Favorites from '@views/favorites'
 
-
+import Detail from '../views/detail.vue'
 
 const routes = [{
     path: '/',
@@ -91,7 +91,14 @@ const routes = [{
     meta: {
       title: "注册 - 学子商城守护您的优质商品"
     }
-  }
+  },{
+		path: '/detail',
+		name: 'Detail',
+    component:Detail,
+    meta: {
+      title: "商品详情 - 学子商城守护您的优质商品"
+    }
+	}
 ]
 
 const router = new VueRouter({
