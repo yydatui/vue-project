@@ -2,6 +2,7 @@
 	<div id="detail">
 		<orderNav :orderNav="orderNav"></orderNav>
 		<shopDetail></shopDetail>
+		<buttonDetail></buttonDetail>
 	</div>
 
 </template>
@@ -9,6 +10,7 @@
 <script>
 	import orderNav from '../common/orderNav.vue'
 	import shopDetail from '../components/detail/shopDetail.vue'
+	import buttonDetail from '../components/detail/buttonDetail.vue'
 	export default {
 		data() {
 			return {
@@ -17,7 +19,8 @@
 		},
 		components: {
 			orderNav,
-			shopDetail
+			shopDetail,
+			buttonDetail
 		}
 	}
 </script>
@@ -26,5 +29,6 @@
 	#detail{
 		width: 1000px;
 		margin: auto;
+		height: 5000px;
 	}
 </style>

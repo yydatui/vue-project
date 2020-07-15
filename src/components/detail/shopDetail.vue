@@ -85,10 +85,10 @@
 				this.defaultImgSrc = this.goodsImg[index].bigImgSrc;
 			},
 			imgChange(event) {
-				event.className = 'changeBig'
+
 			},
 			handleChange(value) {
-				
+
 			}
 		},
 		created() {}
@@ -104,13 +104,21 @@
 			.bigImg {
 				overflow: hidden;
 
-				.changeBig {
-					width: 100%;
-					height: 100%;
-					animation: changeBiger 5s infinite;
-					animation-delay: 5s;
-					transform: scale(1.08);
+				img {
+					transition: 1s transform;
+					&:hover {
+						transform: scale(1.1, 1.1);
+						transition: 1s transform;
+					}
 				}
+
+				// .changeBig {
+				// 	width: 100%;
+				// 	height: 100%;
+				// 	animation: changeBiger 5s infinite;
+				// 	animation-delay: 5s;
+				// 	transform: scale(1.08);
+				// }
 			}
 
 			.smallImgs {
@@ -175,14 +183,27 @@
 					}
 				}
 			}
-			
-			.buttons{
+
+			.buttons {
 				margin-left: 50px;
 				margin-top: 30px;
 				width: 50%;
 				display: flex;
 				justify-content: space-between;
 			}
+		}
+	}
+
+	@keyframes scaleDraw {
+
+		/*定义关键帧、scaleDrew是需要绑定到选择器的关键帧名称*/
+		0% {
+			transform: scale(1);
+			/*开始为原始大小*/
+		}
+
+		75% {
+			transform: scale(1.2);
 		}
 	}
 </style>
