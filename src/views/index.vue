@@ -1,6 +1,5 @@
 <template>
   <div class>
-    <index-nav />
     <banner />
     <index-content :shopinfo="content1" :color="true" :herf="herf1" />
     <index-content :shopinfo="content2" :color="false" :herf="herf2" />
@@ -9,13 +8,11 @@
 </template>
 
 <script>
-import indexNav from "@common/indexNav";
 import banner from "@components/banner"
 import indexContent from "@common/indexContent";
 import footerBox from "@common/footerBox";
 export default {
   components:{
-    indexNav,
     indexContent,
     footerBox,
     banner

@@ -1,14 +1,14 @@
 <template>
   <div class="login">
-    <left-nav-bar />
+
   </div>
 </template>
 
 <script>
-import leftNavBar from '@common/leftNavBar'
+
 export default {
   components:{
-    leftNavBar
+
   },
   data() {
     return {
