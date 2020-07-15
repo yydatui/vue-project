@@ -17,8 +17,8 @@
               {{ toplist[0].text2 }}
             </p>
             <p class="price" :class="{'bluecolor':color,'pinkcolor':!color}">￥{{ toplist[0].price }}</p>
-            <el-button type="primary" :class="{'bluebg':color,'pinkbg':!color}">
-              <span class="button" @click="gotoMenu">1查看详细</span>
+            <el-button type="primary" @click="gotoMenu" :class="{'bluebg':color,'pinkbg':!color}">
+              <span class="button">查看详细</span>
             </el-button>
           </div>
           <span class="img">
@@ -37,7 +37,7 @@
               class="price pink"
               :class="{'bluecolor':color,'pinkcolor':!color}"
             >￥{{ toplist[1].price }}</p>
-            <el-button type="primary" :class="{'bluebg':color,'pinkbg':!color}">
+            <el-button type="primary"  @click="gotoMenu" :class="{'bluebg':color,'pinkbg':!color}">
               <span class="button">查看详细</span>
             </el-button>
           </div>
@@ -61,7 +61,7 @@
               {{ toplist[0].text2 }}
             </p>
             <p class="price" :class="{'bluecolor':color,'pinkcolor':!color}">￥{{ toplist[0].price }}</p>
-            <el-button type="primary" :class="{'bluebg':color,'pinkbg':!color}">
+            <el-button type="primary" @click="gotoMenu" :class="{'bluebg':color,'pinkbg':!color}">
               <span class="button">查看详细</span>
             </el-button>
           </div>
@@ -81,7 +81,7 @@
               class="price pink"
               :class="{'bluecolor':color,'pinkcolor':!color}"
             >￥{{ toplist[1].price }}</p>
-            <el-button type="primary" :class="{'bluebg':color,'pinkbg':!color}">
+            <el-button type="primary" @click="gotoMenu" :class="{'bluebg':color,'pinkbg':!color}">
               <span class="button">查看详细</span>
             </el-button>
           </div>
@@ -111,7 +111,7 @@
           <img :src="item.img" class="hand" />
           <p>{{ item.title }}</p>
           <p class="price" :class="{'bluecolor':color,'pinkcolor':!color}">￥{{ item.price }}</p>
-          <el-button type="primary" :class="{'bluebg':color,'pinkbg':!color}">查看详细</el-button>
+          <el-button type="primary" @click="gotoMenu" :class="{'bluebg':color,'pinkbg':!color}">查看详细</el-button>
         </div>
       </div>
     </div>
@@ -233,7 +233,7 @@ export default {
       //指定跳转的路由的名字下 this.$router.replace({name:'menu'})
       // this.$router.replace({name:'menu'})
       //通过push进行跳转
-      this.$router.push('/login')
+      this.$router.push('/detail')
     }
   },
 }

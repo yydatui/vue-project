@@ -12,7 +12,8 @@
     "element-ui": "^2.13.2",
     "sass-resources-loader": "^2.0.3",
     "vue": "^2.6.11",
-    "vue-router": "^3.2.0"
+    "vue-router": "^3.2.0",
+    "vue-seamless-scroll": "^1.1.21"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.4.0",
