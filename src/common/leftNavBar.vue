@@ -8,7 +8,7 @@
         text-color="#fff"
         active-text-color="#ffd04b"
       >
-        <el-submenu index="1">
+        <el-submenu index="1" class="navbar-sub">
           <template slot="title">
             <i class="el-icon-s-unfold"></i>
             <span>我的订单</span>

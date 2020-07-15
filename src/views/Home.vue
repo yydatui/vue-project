@@ -1,16 +1,16 @@
 <template>
   <div class="home">
-		<banner></banner>
+		<seamless-scroll />
   </div>
 </template>
 
 <script>
-import banner from '@components/banner.vue'
 
+import seamlessScroll from "@components/seamlessScroll"
 export default {
   name: 'Home',
 	components:{
-		banner
+		seamlessScroll
 	}
 }
 </script>
