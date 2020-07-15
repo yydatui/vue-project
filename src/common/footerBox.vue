@@ -47,4 +47,9 @@ export default {
   padding: 30px 85px;
   margin-bottom: 30px;
 }
+.foo-box h3{
+  font: 14px simhei;
+  font-weight: inherit;
+  padding-left: 3px;
+}
 </style>

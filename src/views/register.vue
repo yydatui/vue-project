@@ -1,12 +1,16 @@
 <template>
-  <div class="order-table">
-<table cellpadding="0" cellspacing="0"></table>
+  <div class="register">
+    <main-register />
   </div>
 </template>
 
 <script>
+import mainRegister from '@/components/mainRegister'
 export default {
   name: '',
+  components:{
+    mainRegister
+  },
   data() {
     return {
 

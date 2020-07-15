@@ -1,22 +1,27 @@
 <template>
   <div class="w-max-box clear-fix">
-    <order-nav :orderNav="orderNavBar" />
-    <left-nav-bar />
+    <div class="order-box right">
+      <order-table />
+      <order-item />
+      <page-code />
+    </div>
   </div>
 </template>
 
 <script>
-import leftNavBar from '@/common/leftNavBar'
-import orderNav from "@/common/orderNav";
+import orderTable from '@/components/orderList/orderTable'
+import orderItem from '@/components/orderList/orderItem'
+import pageCode from '@/components/orderList/pageCode'
 export default {
   name: "",
   components: {
-    leftNavBar,
-    orderNav
+    orderTable,
+    orderItem,
+    pageCode
   },
   data() {
     return {
-      orderNavBar: ["首页", "订单管理"]
+
     };
   }
 };

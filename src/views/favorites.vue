@@ -10,7 +10,7 @@
 </template>
 
 <script>
-	import ManageFavorites from '../common/ManageFavorites.vue'
+	import ManageFavorites from '@/common/ManageFavorites.vue'
 	import shoucangList from '@components/shoucangList.vue'
 	export default {
 		data() {
