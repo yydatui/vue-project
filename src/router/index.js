@@ -8,6 +8,7 @@ Vue.use(VueRouter)
 
 import Index from '@views/index'
 import Login from '@views/login'
+import Orders from '@views/orders'
 
 const routes = [{
     path: '/',
@@ -37,6 +38,10 @@ const routes = [{
     path: '/favorites',
     name: 'Favorites',
     component: Favorites
+  }, {
+    path: '/orders',
+    name: 'Orders',
+    component: Orders
   }
 ]
 

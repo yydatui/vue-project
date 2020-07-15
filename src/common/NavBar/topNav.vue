@@ -1,5 +1,6 @@
 <template>
-  <div class="nav">
+  <div class="nav-box">
+    <div class="nav">
     <div class="logo left">
       <a href="/index"><img :src="logourl" alt="学子商城" srcset /></a>
       <slot name="left"></slot>
@@ -7,6 +8,7 @@
 
     <slot name="content"></slot>
     <slot name="right"></slot>
+  </div>
   </div>
 </template>
 
@@ -28,6 +30,16 @@ export default {
 </script>
 
 <style scoped>
+.nav-box{
+  width: 100%;
+  background: #F5F5F5;
+  position: fixed;
+  height: 60px;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+}
 .nav {
   padding: 15px 0;
   width: 1000px;

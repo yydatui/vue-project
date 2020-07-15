@@ -2,6 +2,7 @@
   <div class="navbar">
     <el-col :span="4">
       <el-menu
+        aria-checked="1"
         class="el-menu-vertical-demo"
         background-color="#0AA1ED"
         text-color="#fff"
