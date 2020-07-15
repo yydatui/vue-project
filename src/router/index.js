@@ -9,12 +9,18 @@ const About = () =>
 const Home = () =>
   import ("@views/Home")
 
-const Index = () => import("@views/index")
-const Login = () => import("@views/login")
-const Orders = () => import("@views/orders")
-const Register = () => import("@views/register")
-const Favorites = () => import("@views/favorites")
-const Detail = () => import("@views/detail")
+const Index = () =>
+  import ("@views/index")
+const Login = () =>
+  import ("@views/login")
+const Orders = () =>
+  import ("@views/orders")
+const Register = () =>
+  import ("@views/register")
+const Favorites = () =>
+  import ("@views/favorites")
+const Detail = () =>
+  import ("@views/detail")
 
 // import About from '@views/About'
 // import Home from '@views/Home'
@@ -69,19 +75,19 @@ const routes = [{
     path: '/favorites',
     name: 'Favorites',
     component: Favorites,
-    meta:{
-       title: "我的收藏 - 学子商城守护您的优质商品"
-     }
-  },{
-		path: '/detail',
-		name: 'Detail',
-		component:Detail,
-		meta:{
-		   title: "商品详情 - 学子商城守护您的优质商品"
-		 }
-	},{
-		path: '/orders',
-		name: 'Orders',
+    meta: {
+      title: "我的收藏 - 学子商城守护您的优质商品"
+    }
+  }, {
+    path: '/detail',
+    name: 'Detail',
+    component: Detail,
+    meta: {
+      title: "商品详情 - 学子商城守护您的优质商品"
+    }
+  }, {
+    path: '/orders',
+    name: 'Orders',
     component: Orders,
     meta: {
       title: "我的订单 - 学子商城守护您的优质商品"
@@ -90,9 +96,9 @@ const routes = [{
     path: '/register',
     name: 'Register',
     component: Register,
-    meta:{
-       title: "注册 - 学子商城守护您的优质商品"
-     }
+    meta: {
+      title: "注册 - 学子商城守护您的优质商品"
+    }
   }
 ]
 
@@ -110,6 +116,7 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
   document.title = to.matched[0].meta.title
+  window.scrollTo(0, 0)
   next()
 })
 
