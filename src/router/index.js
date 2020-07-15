@@ -4,14 +4,21 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 //路由懒加载
-const About = () => import("@views/About")
-const Home = () => import("@views/Home")
+const About = () =>
+  import ("@views/About")
+const Home = () =>
+  import ("@views/Home")
 
-const Index = () => import("@views/index")
-const Login = () => import("@views/login")
-const Orders = () => import("@views/orders")
-const Register = () => import("@views/register")
-const Favorites = () => import("@views/favorites")
+const Index = () =>
+  import ("@views/index")
+const Login = () =>
+  import ("@views/login")
+const Orders = () =>
+  import ("@views/orders")
+const Register = () =>
+  import ("@views/register")
+const Favorites = () =>
+  import ("@views/favorites")
 
 // import About from '@views/About'
 // import Home from '@views/Home'
@@ -28,62 +35,62 @@ const routes = [{
     path: '/',
     name: 'Index',
     component: Index,
-    meta:{
-       title: "首页 - 学子商城守护您的优质商品"
-     }
+    meta: {
+      title: "首页 - 学子商城守护您的优质商品"
+    }
   },
   {
     path: '/index',
     name: 'Index',
     component: Index,
-    meta:{
-       title: "首页 - 学子商城守护您的优质商品"
-     }
+    meta: {
+      title: "首页 - 学子商城守护您的优质商品"
+    }
   },
   {
     path: '/login',
     name: 'Login',
     component: Login,
-    meta:{
-       title: "登陆 - 学子商城守护您的优质商品"
-     }
+    meta: {
+      title: "登陆 - 学子商城守护您的优质商品"
+    }
   },
   {
     path: '/home',
     name: 'Home',
     component: Home,
-    meta:{
-       title: "首页 - 学子商城守护您的优质商品"
-     }
+    meta: {
+      title: "首页 - 学子商城守护您的优质商品"
+    }
   },
   {
     path: '/about',
     name: 'About',
     component: About,
-    meta:{
-       title: "关于 - 学子商城守护您的优质商品"
-     }
+    meta: {
+      title: "关于 - 学子商城守护您的优质商品"
+    }
   }, {
     path: '/favorites',
     name: 'Favorites',
     component: Favorites,
-    meta:{
-       title: "我的收藏 - 学子商城守护您的优质商品"
-     }
+    meta: {
+      title: "我的收藏 - 学子商城守护您的优质商品"
+    }
   }, {
     path: '/orders',
     name: 'Orders',
     component: Orders,
-    meta:{
-       title: "我的订单 - 学子商城守护您的优质商品"
-     }
+    meta: {
+      title: "我的订单 - 学子商城守护您的优质商品"
+    }
   }, {
     path: '/register',
     name: 'Register',
     component: Register,
-    meta:{
-       title: "注册 - 学子商城守护您的优质商品"
-     }
+    meta: {
+      title: "注册 - 学子商城守护您的优质商品"
+    }
   }
 ]
 

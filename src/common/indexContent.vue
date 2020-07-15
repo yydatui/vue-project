@@ -18,7 +18,7 @@
             </p>
             <p class="price" :class="{'bluecolor':color,'pinkcolor':!color}">￥{{ toplist[0].price }}</p>
             <el-button type="primary" :class="{'bluebg':color,'pinkbg':!color}">
-              <span class="button">查看详细</span>
+              <span class="button" @click="gotoMenu">1查看详细</span>
             </el-button>
           </div>
           <span class="img">
@@ -224,8 +224,19 @@ export default {
     this.title2 = this.shopinfo.title2;
 
     // console.log(bottlist.rglist.list);
-  }
-};
+  },
+  methods: {
+    gotoMenu(){
+      // console.log(this.$router);
+      //指定跳转的地址 this.$router.replace('/menu')
+      // this.$router.replace('/detail')
+      //指定跳转的路由的名字下 this.$router.replace({name:'menu'})
+      // this.$router.replace({name:'menu'})
+      //通过push进行跳转
+      this.$router.push('/login')
+    }
+  },
+}
 </script>
 
 <style scoped>
