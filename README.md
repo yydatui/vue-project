@@ -12,7 +12,7 @@ npm run serve
 npm run dev
 ```
 
-### 醒目打包
+### 项目打包
 ```
 npm run build
 ```
