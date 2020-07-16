@@ -1,16 +1,18 @@
-# vue-mall
+# vue-mall 学子商城
 
-## Project setup
+## 安装项目依赖
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 项目运行
 ```
 npm run serve
+或
+npm run dev
 ```
 
-### Compiles and minifies for production
+### 醒目打包
 ```
 npm run build
 ```
