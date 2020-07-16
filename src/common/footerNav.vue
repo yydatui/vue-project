@@ -3,7 +3,7 @@
     <div class="foo">
       <div class="foo1 left">
         <p>
-          <img src="http://doc.canglaoshi.org/tstore_v1/images/footer/logo.png" alt />
+          <img src="../assets/images/logo.png" alt />
         </p>
         <p>
           <img src="http://doc.canglaoshi.org/tstore_v1/images/footer/footerFont.png" alt />

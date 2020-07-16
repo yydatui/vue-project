@@ -2,7 +2,7 @@
   <div class="nav-box">
     <div class="nav">
     <div class="logo left">
-      <a href="/index"><img :src="logourl" alt="学子商城" srcset /></a>
+      <a href="/index"><img src="../../assets/images/logo.png" alt="学子商城" srcset /></a>
       <slot name="left"></slot>
     </div>
 

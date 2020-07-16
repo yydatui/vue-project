@@ -15,6 +15,7 @@ const Orders = () => import("@views/orders")
 const Register = () => import("@views/register")
 const Favorites = () => import("@views/favorites")
 const Detail = () => import("@views/detail")
+const Help = () => import("@views/help")
 
 // import About from '@views/About'
 // import Home from '@views/Home'
@@ -93,7 +94,14 @@ const routes = [{
     meta:{
        title: "注册 - 学子商城守护您的优质商品"
      }
-  }
+  },{
+		path: '/help',
+		name: 'Help',
+		component: Help,
+		meta:{
+			title: "帮助 - 学子商城守护您的优质商品"
+		}
+	}
 ]
 
 const router = new VueRouter({
