@@ -14,11 +14,11 @@
             <span>我的订单</span>
           </template>
           <el-menu-item-group>
-            <el-menu-item index="1-1">全部订单</el-menu-item>
-            <el-menu-item index="1-2">待付款</el-menu-item>
-            <el-menu-item index="1-3">代收款 <span style="color:#0AA1ED"> 1</span></el-menu-item>
-            <el-menu-item index="1-4">待评价</el-menu-item>
-            <el-menu-item index="1-5">退货退款</el-menu-item>
+            <el-menu-item index="1-1"><a href="/orders#">全部订单</a></el-menu-item>
+            <el-menu-item index="1-2"><a href="/orders#">待付款</a></el-menu-item>
+            <el-menu-item index="1-3"><a href="/orders#">代收款 <span style="color:#0AA1ED"> 1</span></a></el-menu-item>
+            <el-menu-item index="1-4"><a href="/orders#">待评价</a></el-menu-item>
+            <el-menu-item index="1-5"><a href="/orders#">退货退款</a></el-menu-item>
           </el-menu-item-group>
         </el-submenu>
         <el-submenu index="2">
@@ -33,7 +33,7 @@
             <span>收货地址</span>
           </template>
           <el-menu-item-group>
-            <el-menu-item index="4-1">全部订单</el-menu-item>
+            <el-menu-item index="3-1"><a href="/address">地址管理</a></el-menu-item>
           </el-menu-item-group>
         </el-submenu>
         <el-submenu index="4">
@@ -42,8 +42,8 @@
             <span>账号管理</span>
           </template>
           <el-menu-item-group>
-            <el-menu-item index="4-1">我的信息</el-menu-item>
-            <el-menu-item index="4-2">安全管理</el-menu-item>
+            <el-menu-item index="4-1"><a href="/personal">我的信息</a></el-menu-item>
+            <el-menu-item index="4-2"><a href="/personal_password#">安全管理</a></el-menu-item>
           </el-menu-item-group>
         </el-submenu>
       </el-menu>
