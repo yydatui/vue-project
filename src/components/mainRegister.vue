@@ -44,9 +44,22 @@ export default {
         qpassword: "",
         tel: "",
         emall:""
-      }
+      },
+      timer: ""
     };
-  }
+  },
+  methods: {
+    submitForm(){
+      this.$message({
+          message: '恭喜你，注册成功!',
+          type: 'success'
+        });
+         this.timer = setTimeout(()=> {this.$router.push("/")},1000);
+    }
+  },
+  beforeDestroy() {
+      clearInterval(this.timer);
+    }
 };
 </script>
 

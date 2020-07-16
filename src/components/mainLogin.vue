@@ -34,7 +34,7 @@
           <a href="##" class="text">忘记密码？</a>
         </span>
         <p>
-          <el-button type="primary" @click="submitForm('ruleForm')">登录</el-button>
+          <el-button type="primary" @click="submitForm">登录</el-button>
         </p>
       </el-form>
     </div>
@@ -71,10 +71,22 @@ export default {
       rules: {
         pass: [{ validator: validatePass, trigger: "blur" }],
         name: [{ validator: checkUserName, trigger: "blur" }]
-      }
+      },
+      timer: "",
     };
   },
-  methods: {}
+  methods: {
+    submitForm(){
+      this.$message({
+          message: '恭喜你，登陆成功!',
+          type: 'success'
+        });
+         this.timer = setTimeout(()=> {this.$router.push("/")},1000);
+    }
+  },
+  beforeDestroy() {
+      clearInterval(this.timer);
+    }
 };
 </script>
 
