@@ -35,7 +35,8 @@ const Payment = () =>
   import ("@views/payment")
 const PaySuccess = () =>
   import ("@views/paySuccess")
-  const Help = () => import ("@views/help")
+const Help = () =>
+  import ("@views/help")
 
 // import About from '@views/About'
 // import Home from '@views/Home'
